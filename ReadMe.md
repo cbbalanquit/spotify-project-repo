@@ -38,23 +38,6 @@ In this dashboard, we have 4 visualizations:
 3. Top Songs : same with Top Artists, a horizontal bar chart showing our most favorite song
 4. Streaming Behavior Tracker : well in this, if you are interested to your listening behavior, we can see in what hour and day you typically need your daily dose of amazing music
 
-## Realizations and Cool Things Discovered
-As a newbie trying to create this more complicated end-to-end data pipeline project, I had many realizations and cool things discovered:
-1. The most complicated and energy-draining step is setting up AIRFLOW!!!  <br />
-At first, I'm trying to setup airflow just using wsl but been frustrated with the barrage of errors I'm encountering. Luckily, I found an easier and less complicated way, which is to use DOCKER.  <br />
-2. Your understanding about the problem is more important than the tools!!.  <br />
-In this end-to-end project, there are so many ways and tools available out there in order to get the data from Spotify until we can visualize it.
-But the main thing helped me is that I know the general requirements needed in order to do that. API Request, Data Transformations and Validations,
-Data Storage and Data Viz Tool. <br />
-3. BE CONSISTENT AND NEVER GIVE UP 😉 <br />
-One of the greatest obstacles we can encounter while doing a project and self-learning is our drive to finish it until the end.  <br />
-During the initial phase in doing this project, I'm very excited since I'm gonna be able to use the 'cool' stuff data engineers use. But there are:
-    - a lot of bugs. Bugs, which some of them, frustrates me for a day or even a week finding solutions and fixes.
-    - times when I'm being lazy. Yes, and that's a lot of times 😂 Doom-scrolling socmeds, binge-watch an anime, read ONE PIECE manga! and much more
-    - and much more I cannot enumerate as this will be TLDR  <br />
-4. IT IS NOT OKAY TO BE LONELY  <br />
-Communities really helped me to finish this project. Stack Overflow, Discord Channels, and my one true friend GOOGLE!!! I'm really grateful for all the people who patiently and generously answer the frustrations we have, the errors, bugs, setup problems, etc.
-
 ## Features I wish to add and study
 1. Deploy this in a cloud environment so I don't need to open my laptop every day
 2. As you can see in the Power BI dashboard, I want to have some additional features:
