@@ -10,10 +10,11 @@ These are the three(3) steps needed to setup our Spotify Web API:
 -- make sure that you save your client_id, redirect_uri and client_secret as this will be used in the next steps.
 3. Authenticate a user and get authorization to access user data </br>
 There are 3 types of authentication a user can use:
-a. Authorization Code Flow
-b. Client Credentials
-c. Implicit grant
--- In order to make our app have infinite access to our Spotify Web API, we will use the [Authorization Code Flow](https://developer.spotify.com/documentation/general/guides/authorization/code-flow/) If authentication and authorization is successful, an access token will be given which can be used to request a refresh token everytime the app will run. Keep in mind that the refresh token is set to expire in an hour. 
+	* Authorization Code Flow
+	* Client Credentials
+	* Implicit grant
+
+In order to make our app have infinite access to our Spotify Web API, we will use the [Authorization Code Flow](https://developer.spotify.com/documentation/general/guides/authorization/code-flow/) If authentication and authorization is successful, an access token will be given which can be used to request a refresh token everytime the app will run. Keep in mind that the refresh token is set to expire in an hour. 
 5. Retrieve the data from a Web API endpoint. In this project, we use the [me/player/recently-played](https://developer.spotify.com/documentation/web-api/reference/#/operations/get-recently-played) endpoint
 
 For the first step,
@@ -24,8 +25,18 @@ For the first step,
 Since we will be using Airflow as our orchestration tool, we will use DAGs. In this project, the DAG setup will have 2 steps.
 <a href="https://drive.google.com/uc?export=view&id="><img src="https://drive.google.com/uc?export=view&id=1TNmztfTaKUKNzUp2sgzMy2N_GPf8U3X_" style="width: 360px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
 
-In the first part of the dags, which is the 'run_spotify_etl', it will start from getting the refresh token using POST request to Spotify Web API. Then, using the token, GET request to the API to get the response which contains the data from the recently_played_tracks of the Spotify user. This response will be converted to JSON object. Using a for loop, needed data will be stored to set of lists which will be converted to a dataframe. Then, data validation will be done to check if there are (a) empty or has blank data received, (b) the song is played yesterday. If not, remove the records with playtime not matching yesterday, (c) There are duplicates in the data received. Duplicate data are removed
-Check if there are null data. Remove records containing null values
+In the first part of the dags, which is the 'run_spotify_etl', the step by step procedure are as follows:
+1. Get the refresh token using POST request to Spotify Web API.
+2. Using the token, GET request to the API to get a response which contains the data from the recently_played_tracks of the Spotify user.
+3. Convert the response to JSON object.
+4. Using a for loop, needed data will be stored to set of lists which will be converted to a dataframe
+<a href="https://drive.google.com/uc?export=view&id="><img src="https://drive.google.com/uc?export=view&id=1Il2NjSFkFnp29ZJlPms3naLeLPNquTAT" style="width: 360px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+
+6. Then, data validation will be done to check if there are:
+	* Empty or has blank data received
+	* The song is played yesterday. If not, remove the records with playtime not matching yesterday
+	* There are duplicates in the data received. Duplicate data are removed
+	* Check if there are null data. Remove records containing null values
 
 ### SQL Server
 Before running the ETL Pipeline in Airflow, make sure that the SQL Server Database is already setup. In this project, one database, 2 tables, 1 stored procedure, and 1 job is setup in the SQL Server Management Studio.
