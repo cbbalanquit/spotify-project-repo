@@ -9,12 +9,12 @@ from datetime import datetime, timedelta
 class Run_spotify_etl:
     def __init__(self):
         # Initialize value needed for the refresh token
-        self.client_id = "90aabbdc77d2445db9d8d8ea4e0a0082"
-        self.client_secret = "77a3b0f0389e449d9cb7b2fdb9f70ece"
-        self.redirect_uri = "https://spotify_deproject.me"
-        self.spotify_token = ""
-        self.refresh_token = "AQCff5gPtL2385QdYJwAPaas0bWjiUCe3ezuOh0ZLmdR12_ECUvNeJx2qdEKvMcfC7xRHeVE7WlbsOPajF_ybbeWXn4tCJA7qWBcVmtkywNYQmoMeo9LCt05lcLzlublfRQ"
-        self.base_64 = "OTBhYWJiZGM3N2QyNDQ1ZGI5ZDhkOGVhNGUwYTAwODI6NzdhM2IwZjAzODllNDQ5ZDljYjdiMmZkYjlmNzBlY2U="
+        self.client_id = "<insert_client_id>"
+        self.client_secret = "<insert_client_secret>"
+        self.redirect_uri = "<insert_redirect_uri>"
+        self.spotify_token = "<insert_spotify_token"
+        self.refresh_token = ""
+        self.base_64 = "<insert base64 equivalent of your client id and client secret"
 
         # initialize the yesterday variables
         self.yesterday_unix_timestamp = ""
@@ -27,9 +27,6 @@ class Run_spotify_etl:
         self.status = ""
         self.df = pd.DataFrame()
         self.message = ""
-
-        # Initialize variable for the database connection
-        self.DATABASE_LOCATION = "sqlite:///played_tracks.sqlite"
 
     def data_validation(self):
         string_final = ""
