@@ -12,24 +12,17 @@ class save_to_db:
 
     def save_to_db(self):
         # read data from json file
-        self.songs_df = pd.read_json(f'.../spotify_project/output_data/recentlyplayed_json/{self.yesterday.date()}.json', orient = 'index')
-
-        # Set the SQL Server credentials needed
-        #drivers = [item for item in pyodbc.drivers()]
-        #server_alt = 'CHAN-NITRO\SQLSERVER_CHAN'
-        #database_alt = 'personal_projects'
-        server = 'CHAN-NITRO\SQLEXPRESS'
-        database = 'spotify_project'
+        self.songs_df = pd.read_json(<input_file_path>, orient = 'index')
 
         # Establish the connection with the database in the SQL Server
-        conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=192.168.254.162,49253;DATABASE=spotify_project;UID=chandatathing;PWD=sqlserver_admin;TrustServerCertificate=yes;')
+        conn = pyodbc.connect('DRIVER=<SQLSERVER_DRIVER>;SERVER=<SERVER_NAME>;DATABASE=<DB_NAME>;UID=<USER>;PWD=<PASSWORD>;TrustServerCertificate=yes;')
 
         # Set the cursor
         cursor = conn.cursor()
 
         # Prepare the query for inserting records from the dataframe
         insert_query = '''
-            INSERT INTO dbo.played_tracks_chan (
+            INSERT INTO db_name.table_name (
                 song_name,
                 played_at,
                 song_duration_ms,
