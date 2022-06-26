@@ -25,7 +25,7 @@ In this project, data is captured from the Spotify Web API using the python requ
 7. Establish connection and cursor into the sql server database
 8. Per row in the dataframe, insert value into the database
 9. Since the 'played_at' sent by the API is in iso8601 datetime format. We created a stored procedure that will run every 8AM and 8PM which will convert the field into datetime format
-10. Connect Power Bi with the sql server database then Visualize
+10. Connect Power BI with the sql server database then Visualize
 
 ## Power BI Dashboard
 With all the ETL steps done in this project, I am very happy with the output dashboard. Just like the yearly "Music Reflections Spotify is wonderfully providing us, we can use this dashboard to check our music streaming behavior and tastes.
@@ -34,8 +34,8 @@ With all the ETL steps done in this project, I am very happy with the output das
 
 In this dashboard, we have 4 visualizations:
 1. Most Listened Decade : a doughnut chart which shows us in what decade our ears belong
-2. Top Artists : a horizontal bar chart showing the top artists we religiously listening to
-3. Top Songs : same with Top Artists, a horizontal bar chart showing our most favorite song
+2. Top Artists : a horizontal bar chart showing the top artists we are religiously listening to
+3. Top Songs : same with Top Artists, a horizontal bar chart showing our most favorite songs
 4. Streaming Behavior Tracker : well in this, if you are interested to your listening behavior, we can see in what hour and day you typically need your daily dose of amazing music
 
 ## Features I wish to add and study
