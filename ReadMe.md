@@ -2,7 +2,7 @@
 In this project, data is captured from the Spotify Web API using the python request module. The data collected from the Spotify Web API is stored in CSV file, JSON file, and SQL Serve database. ETL jobs are written in python and scheduled in airflow to run every 12 midnight (UTC).
 
 ## ETL Pipeline Architecture
-<a href="https://drive.google.com/uc?export=view&id="><img src="https://drive.google.com/uc?export=view&id=1ZxmiU4iIX67lbp7JzA8Z-3kL_Yo49o8N" style="width: 1000px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+<a href="https://drive.google.com/uc?export=view&id="><img src="https://drive.google.com/uc?export=view&id=13sHiPqTrECu1Q0MdTLp9JOKPtdjfB-FK" style="width: 1000px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
 
 #### Amazing Tools used in the pipeline:
 - Spotify Web API
