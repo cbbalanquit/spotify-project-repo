@@ -30,7 +30,7 @@ In this project, data is captured from the Spotify Web API using the python requ
 ## Power BI Dashboard
 With all the ETL steps done in this project, I am very happy with the output dashboard. Just like the yearly "Music Reflections Spotify is wonderfully providing us, we can use this dashboard to check our music streaming behavior and tastes.
 
-<a href="https://drive.google.com/uc?export=view&id="><img src="https://drive.google.com/uc?export=view&id=1BMMV9pzywZe6uPqHdozjm4Nxfib-vrXO" style="width: 1000px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+<a href="https://drive.google.com/uc?export=view&id="><img src="https://drive.google.com/uc?export=view&id=14Dv6VQphL_5-TMDkouBHpmT6Kakh5_WD" style="width: 1000px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
 
 In this dashboard, we have 4 visualizations:
 1. Most Listened Decade : a doughnut chart which shows us in what decade our ears belong
